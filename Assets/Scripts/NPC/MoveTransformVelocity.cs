@@ -10,6 +10,10 @@ public class MoveTransformVelocity : MonoBehaviour, IMoveVelocity
         this.velocityVector = velocityVector;
     }
 
+    public void MoveTowards(Vector3 position, float velocity) {
+        transform.position = Vector3.MoveTowards(transform.position, position, velocity);
+    }
+
     void Update() {
         transform.position += velocityVector * Time.deltaTime;
     }

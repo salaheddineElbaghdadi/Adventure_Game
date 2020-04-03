@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-public class MovePositionDirect : MonoBehaviour
+public class MovePositionDirect : MonoBehaviour, IMovePosition
 {
     public event EventHandler OnPositionReached;
 
     [SerializeField] private float speed = 4f;
     private Vector3 movePosition;
-    private float eps = 0.1f;
+    private float eps = 0.05f;
 
     public void SetMovePosition(Vector3 movePosition) {
         this.movePosition = movePosition;

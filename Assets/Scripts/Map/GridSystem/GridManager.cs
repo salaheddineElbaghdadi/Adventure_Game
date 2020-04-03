@@ -19,7 +19,7 @@ public class GridManager : MonoBehaviour
     private AStar aStar;
 
 
-    void Start() {
+    void Awake() {
         walkableTilemap.CompressBounds();
         bounds = walkableTilemap.cellBounds;
         tilemapsGrid = walkableTilemap.GetComponentInParent<Grid>();
@@ -31,7 +31,6 @@ public class GridManager : MonoBehaviour
         if (drawGrid || drawText)
             CreateDebugText();
         
-        DrawPath(new Vector2Int(-5, -5), new Vector2Int(2, 3), 1000);
     }
 
     public void CreateGrid() {
@@ -53,6 +52,22 @@ public class GridManager : MonoBehaviour
         Debug.Log(bounds.ToString());
         Debug.Log(bounds.size.x);
         Debug.Log(bounds.size.y);
+    }
+
+    public List<Spot> GetPath(Vector2Int start, Vector2Int end, int length) {
+        return aStar.CreatePath(spots, start, end, length);
+    }
+
+    public Vector3Int GetRandomGridPosition() {
+        return new Vector3Int((int)UnityEngine.Random.Range(bounds.xMin, bounds.xMax), (int)UnityEngine.Random.Range(bounds.yMin, bounds.yMax), 0);
+    }
+
+    public Vector3Int WorldToGridPosition(Vector3 worldPosition) {
+        return tilemapsGrid.WorldToCell(worldPosition);
+    }
+
+    public Vector3 GridToWorldPosition(Vector3Int gridPosition) {
+        return (tilemapsGrid.CellToWorld(gridPosition) + new Vector3(tilemapsGrid.cellSize.x/2, tilemapsGrid.cellSize.y/2));
     }
 
     private void DrawPath(Vector2Int start, Vector2Int end, int length) {

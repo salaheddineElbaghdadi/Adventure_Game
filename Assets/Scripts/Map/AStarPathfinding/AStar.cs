@@ -84,6 +84,7 @@ public class AStar
                 if (length - (path.Count - 1) > 0) {
                     //path.RemoveRange(0, (path.Count - 1) - length);
                 }
+                path.Reverse();
                 return path;
             }
 

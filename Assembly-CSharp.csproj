@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>/home/saladin/Unity/Hub/Editor/2019.3.0a11/Editor/Data/Tools/RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.sh</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -82,8 +80,10 @@
      <Compile Include="Assets\Scripts\Map\GridSystem\GridManager.cs" />
      <Compile Include="Assets\Scripts\Map\GridSystem\GridSystem.cs" />
      <Compile Include="Assets\Scripts\NPC\Enemy\EnemyAI.cs" />
+     <Compile Include="Assets\Scripts\NPC\IMovePosition.cs" />
      <Compile Include="Assets\Scripts\NPC\IMoveVelocity.cs" />
      <Compile Include="Assets\Scripts\NPC\MovePositionDirect.cs" />
+     <Compile Include="Assets\Scripts\NPC\MovePositionPathFinding.cs" />
      <Compile Include="Assets\Scripts\NPC\MoveTransformVelocity.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\GridTesting.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

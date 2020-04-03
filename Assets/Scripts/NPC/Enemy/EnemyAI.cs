@@ -10,25 +10,28 @@ public class EnemyAI : MonoBehaviour
     private Vector3 startingPosition;
     private Vector3 roamingPosition;
 
-    private MovePositionDirect movePositionDirect;
+    private IMovePosition movePosition;
 
     void Start() {
         startingPosition = transform.position;
         roamingPosition = GetRoamingPosition();
-        movePositionDirect = gameObject.GetComponent<MovePositionDirect>();
-        gameObject.GetComponent<MovePositionDirect>().OnPositionReached += OnPositionReachedEventHandler;
-        movePositionDirect.SetMovePosition(roamingPosition);
+        Debug.Log("Roaming position: " + roamingPosition);
+        movePosition = gameObject.GetComponent<IMovePosition>();
+        gameObject.GetComponent<IMovePosition>().OnPositionReached += OnPositionReachedEventHandler;
+        movePosition.SetMovePosition(roamingPosition);
     }
 
     
 
     private void OnPositionReachedEventHandler(object sender, EventArgs e) {
         roamingPosition = GetRoamingPosition();
-        movePositionDirect.SetMovePosition(roamingPosition);
+        Debug.Log("Roaming position: " + roamingPosition);
+        movePosition.SetMovePosition(roamingPosition);
     }
 
     private Vector3 GetRoamingPosition() {
-        return startingPosition + UtilsClass.GetRandomDir() * UnityEngine.Random.Range(1f, 4f);
+        return startingPosition + UtilsClass.GetRandomDir() * UnityEngine.Random.Range(5f, 7f);
+        //return new Vector3(0, 0);
     }
 
 }
