@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: test
   m_EditorClassIdentifier: 
   InitialStateMoveType: 0
-  HeroInRangeMoveType: 0
-  HeroOutOfRanger: 0
+  HeroInRangeMoveType: 2
+  HeroOutOfRanger: 3
+  maxSpeed: 0
