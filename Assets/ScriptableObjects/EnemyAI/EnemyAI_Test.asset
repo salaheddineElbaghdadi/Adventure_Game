@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a704bbf87304090f682a3d6760729187, type: 3}
   m_Name: EnemyAI_Test
   m_EditorClassIdentifier: 
-  heroRangeDetection: 0
-  maxSpeed: 0
+  heroRangeDetection: 5
+  maxSpeed: 4
   initialStateMoveType: 0
   heroInRangeMoveType: 0
   heroOutOfRnange: 0
