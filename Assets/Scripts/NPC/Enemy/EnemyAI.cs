@@ -6,5 +6,8 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private MovementSystemData movementSystem;
+    public EnemyAIData AIData;
+
+    #region methods
+    #endregion
 }

@@ -80,13 +80,15 @@
      <Compile Include="Assets\Scripts\Map\GridSystem\GridManager.cs" />
      <Compile Include="Assets\Scripts\Map\GridSystem\GridSystem.cs" />
      <Compile Include="Assets\Scripts\NPC\Enemy\EnemyAI.cs" />
+     <Compile Include="Assets\Scripts\NPC\Enemy\EnemyAIData.cs" />
      <Compile Include="Assets\Scripts\NPC\Enemy\EnemyAIOld.cs" />
+     <Compile Include="Assets\Scripts\NPC\Enemy\EnemyStateManager.cs" />
      <Compile Include="Assets\Scripts\NPC\MovementSystem\IMovePosition.cs" />
      <Compile Include="Assets\Scripts\NPC\MovementSystem\IMoveVelocity.cs" />
      <Compile Include="Assets\Scripts\NPC\MovementSystem\MovePositionDirect.cs" />
      <Compile Include="Assets\Scripts\NPC\MovementSystem\MovePositionPathFinding.cs" />
      <Compile Include="Assets\Scripts\NPC\MovementSystem\MoveTransformVelocity.cs" />
-     <Compile Include="Assets\Scripts\NPC\MovementSystem\MovementSystemData.cs" />
+     <Compile Include="Assets\Scripts\NPC\MovementSystem\MovementSystem.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\GridTesting.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
